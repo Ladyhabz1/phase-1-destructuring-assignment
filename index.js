@@ -1,7 +1,10 @@
+// Define the string of farm animals
 const farmAnimals = 'cow horse sheep pig chicken';
 
+// Define the array of colors
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
+// Define the muppet object
 const muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
@@ -10,6 +13,7 @@ const muppet = {
   partner: 'Kermit'
 };
 
+// Define the nestedMuppet object
 const nestedMuppet = {
   nestedName: 'Kermit',
   nestedColor: 'green',
@@ -34,7 +38,7 @@ const [moo, neigh, baa, oink, cluck] = farmAnimals.split(" ");
 const [bessie, , dolly, babe, little] = farmAnimals.split(" ");
 
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-const [blackAndWhite, black, pink, ,] = farmAnimals.split(" ");
+const [blackAndWhite, , black, pink] = farmAnimals.split(" ").filter((animal) => animal !== 'chicken');
 
 // Arrays
 
@@ -48,6 +52,7 @@ const [r, o, y, g, b, , v] = colors;
 const [, , , , , indg] = colors;
 
 // Objects
+
 // 7. Use destructuring to assign all variables using the keys as the variable names
 const { muppetName, color, song, job, partner } = muppet;
 
@@ -59,13 +64,13 @@ const {
     nestedJob,
     nestedPartner,
   } = nestedMuppet;
-  module.exports = {
-    moo, neigh, baa, oink, cluck,
-    bessie, dolly, babe, little,
-    blackAndWhite, black, pink,
-    red, orange, yellow, green, blue, indigo, violet,
-    r, o, y, g, b, v, indg,
-    muppetName, color, song, job, partner,
-    song2, song4, nestedJob, nestedPartner,
-  };
-  
+
+module.exports = {
+  moo, neigh, baa, oink, cluck,
+  bessie, dolly, babe, little,
+  blackAndWhite, black, pink,
+  red, orange, yellow, green, blue, indigo, violet,
+  r, o, y, g, b, v, indg,
+  muppetName, color, song, job, partner,
+  song2, song4, nestedJob, nestedPartner,
+};
